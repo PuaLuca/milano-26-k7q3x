@@ -60,8 +60,9 @@ main:has(.pg:target) #overview:not(:target){display:none}
 .hero h1{margin:0;font-weight:700;font-size:clamp(52px,9vw,108px);line-height:.95;letter-spacing:-1.5px}
 .sub{margin:12px 0 0;font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,28px)}
 .art{flex:0 1 420px;min-width:0}
-.art svg{display:block;width:100%;height:auto}
-.art figcaption{font-size:14px;opacity:.85;text-align:right;padding:6px 0 14px}
+.art{display:flex;justify-content:flex-end}
+.art svg{display:block;width:auto;max-width:100%;height:auto;max-height:clamp(110px,15vw,200px);margin-bottom:24px}
+.art figcaption{display:none}
 .edge{position:relative;display:block;width:100%;height:14px}
 
 /* drawing animation */
@@ -195,7 +196,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
         <h1>Milano</h1>
         <p class="sub">Make your move.</p>
       </div>
-      <figure class="art" style="flex-basis:520px;margin:0">
+      <figure class="art" style="margin:0">
         <svg class="draw" viewBox="0 0 600 200" role="img" aria-label="Line drawing of Milan's skyline: the Duomo, the castle tower, the Navigli houses and the Galleria">
           <g fill="none" stroke="var(--art)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path pathLength="1" d="M0 190H600"/>
@@ -209,20 +210,19 @@ main:has(.pg:target) #overview:not(:target){display:none}
         </svg>
       </figure>
     </div>
+    <div class="edge" aria-hidden="true"></div>
   </header>
 
   <div class="wrap">
     <div class="main-col">
-      <h2>Four days, four faces of Milano</h2>
-      <p class="intro" style="margin-top:4px">Each day takes its look from a piece of the city: the Duomo, Castello Sforzesco, the Navigli, and fashion and design.</p>
       <div class="days">
         <article class="day">
-          <div class="day-hd" style="background:#6E5A4E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M8 22V10l4-4 4 4v12M4 22v-8l2-3 2 3M16 14l2-3 2 3v8M3 22h18"/></svg><div><h3>Day 1, Thursday</h3><p>19 November, the Duomo</p></div></div>
+          <div class="day-hd" style="background:#6E5A4E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M8 22V10l4-4 4 4v12M4 22v-8l2-3 2 3M16 14l2-3 2 3v8M3 22h18"/></svg><div><h3>Day 1, Thursday</h3><p>19 November</p></div></div>
           <ul><li><b>Evening</b><span>Arrival and dinner, <i>Excelsior Hotel Gallia, or any restaurant of your choice</i></span></li></ul>
           <a class="btn" href="#thursday" style="--acc:#6E5A4E;--glow:rgba(176,138,46,.55)">See Thursday</a>
         </article>
         <article class="day">
-          <div class="day-hd" style="background:#9C3B22"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 22V9h10v13M5 9V6l2 2 2-2 2 2 2-2 2 2 2-2 2 2v3M10 22v-4a2 2 0 0 1 4 0v4"/></svg><div><h3>Day 2, Friday</h3><p>20 November, Castello Sforzesco</p></div></div>
+          <div class="day-hd" style="background:#9C3B22"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 22V9h10v13M5 9V6l2 2 2-2 2 2 2-2 2 2 2-2 2 2v3M10 22v-4a2 2 0 0 1 4 0v4"/></svg><div><h3>Day 2, Friday</h3><p>20 November</p></div></div>
           <ul>
             <li><b>09:00 – 11:30</b><span>MOVE workshop, <i>Capgemini Office</i></span></li>
             <li><b>11:30 – 12:00</b><span>Transfer to the secret venue</span></li>
@@ -236,7 +236,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
           <a class="btn" href="#friday" style="--acc:#9C3B22;--glow:rgba(200,100,62,.55)">See Friday</a>
         </article>
         <article class="day">
-          <div class="day-hd" style="background:#1F5A5F"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0M2 20c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0M5 11V5h5v6M14 11V3h5v8"/></svg><div><h3>Day 3, Saturday</h3><p>21 November, the Navigli</p></div></div>
+          <div class="day-hd" style="background:#1F5A5F"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0M2 20c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0M5 11V5h5v6M14 11V3h5v8"/></svg><div><h3>Day 3, Saturday</h3><p>21 November</p></div></div>
           <ul>
             <li><b>11:00 – 12:00</b><span>It’s time for sport</span></li>
             <li><b>13:00 – 14:30</b><span>Lunch, <i>Terrazza Gallia, at the hotel</i></span></li>
@@ -248,7 +248,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
           <a class="btn" href="#saturday" style="--acc:#1F5A5F;--glow:rgba(242,193,78,.6)">See Saturday</a>
         </article>
         <article class="day">
-          <div class="day-hd" style="background:#161616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 19 3M16 16 5 3"/></svg><div><h3>Day 4, Sunday</h3><p>22 November, fashion and design</p></div></div>
+          <div class="day-hd" style="background:#161616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 19 3M16 16 5 3"/></svg><div><h3>Day 4, Sunday</h3><p>22 November</p></div></div>
           <p class="free">Free for everyone. Enjoy Milano your own way.</p>
           <a class="btn" href="#sunday" style="--acc:#161616;--glow:rgba(231,183,178,.65)">See ideas for Sunday</a>
         </article>
@@ -326,7 +326,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
         <svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 15V8l5-7 5 7v7z"/></svg>
         <div class="body">
           <div class="what">Arrival and dinner</div>
-          <div class="where"><a href="https://www.marriott.com/en-us/hotels/millc-excelsior-hotel-gallia-a-luxury-collection-hotel-milan/overview/" target="_blank" rel="noopener">Excelsior Hotel Gallia, or any restaurant of your choice</a></div>
+          <div class="where"><a href="https://www.marriott.com/en-us/hotels/millc-excelsior-hotel-gallia-a-luxury-collection-hotel-milan/overview/" target="_blank" rel="noopener">Excelsior Hotel Gallia</a>, or any restaurant of your choice</div>
           <div class="how"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v2"/></svg>Individual arrival</div>
         </div>
       </div>
@@ -436,7 +436,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
         <div class="time">20:30 – 23:00</div>
         <svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 15V1l3 3 3-3 3 3 3-3v14z"/></svg>
         <div class="body">
-          <div class="what">Dinner<span class="tag ok">Confirmed</span></div>
+          <div class="what">Dinner</div>
           <div class="where"><a href="https://www.vikpellicootto.com/gallery" target="_blank" rel="noopener">Vik Pellico Otto</a></div>
           <div class="how"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M8 21l1.5-3M16 21l-1.5-3"/></svg>Public transport or taxi</div>
         </div>
@@ -522,12 +522,12 @@ main:has(.pg:target) #overview:not(:target){display:none}
       <div class="stop">
         <div class="time">13:00 – 14:30</div>
         <svg class="mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M1 6c2.3-2 4.7-2 7 0s4.7 2 7 0M1 12c2.3-2 4.7-2 7 0s4.7 2 7 0"/></svg>
-        <div class="body"><div class="what">Lunch<span class="tag pend">To be booked</span></div><div class="where"><a href="https://www.galliadining.com/it/terrazza-gallia" target="_blank" rel="noopener">Terrazza Gallia, at the hotel</a></div></div>
+        <div class="body"><div class="what">Lunch<span class="tag pend">Book it yourself</span></div><div class="where"><a href="https://www.galliadining.com/it/terrazza-gallia" target="_blank" rel="noopener">Terrazza Gallia, at the hotel</a></div></div>
       </div>
       <div class="stop">
         <div class="time">15:00 – 18:00</div>
         <svg class="mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M1 6c2.3-2 4.7-2 7 0s4.7 2 7 0M1 12c2.3-2 4.7-2 7 0s4.7 2 7 0"/></svg>
-        <div class="body"><div class="what">Gallia Health Club &amp; Shiseido Spa Milan<span class="tag pend">To be booked</span></div><div class="where"><a href="https://www.galliahealthclub.com/" target="_blank" rel="noopener">Gallia Health Club</a></div></div>
+        <div class="body"><div class="what">Gallia Health Club &amp; Shiseido Spa Milan<span class="tag pend">Book it yourself</span></div><div class="where"><a href="https://www.galliahealthclub.com/" target="_blank" rel="noopener">Gallia Health Club</a></div></div>
       </div>
       <div class="stop">
         <div class="time">18:00 – 19:00</div>
@@ -538,7 +538,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
         <div class="time">19:00 – 23:00</div>
         <svg class="mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M1 6c2.3-2 4.7-2 7 0s4.7 2 7 0M1 12c2.3-2 4.7-2 7 0s4.7 2 7 0"/></svg>
         <div class="body">
-          <div class="what">Aperitivo and dinner in the Navigli<span class="tag ok">Confirmed</span></div>
+          <div class="what">Aperitivo and dinner in the Navigli</div>
           <div class="where"><a href="https://www.ritacocktails.com/" target="_blank" rel="noopener">Rita &amp; Cocktails</a></div>
           <div class="how"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M8 21l1.5-3M16 21l-1.5-3"/></svg>Public transport or taxi</div>
         </div>
@@ -582,9 +582,9 @@ main:has(.pg:target) #overview:not(:target){display:none}
     </div>
     <div class="hero">
       <div class="hero-copy">
-        <p class="kicker">Day 4 of 4</p>
+        <p class="kicker">Day 4 of 4, free day</p>
         <h1>Sunday</h1>
-        <p class="sub">22 November, free day</p>
+        <p class="sub">22 November</p>
       </div>
       <figure class="art" style="margin:0">
         <svg class="draw" viewBox="0 0 400 300" role="img" aria-label="Line drawing of a tailor's dress form with a needle and thread">
