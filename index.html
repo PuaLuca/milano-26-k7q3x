@@ -148,9 +148,11 @@ main:has(.pg:target) #overview:not(:target){display:none}
   .tabs{flex-wrap:nowrap;overflow-x:auto;width:calc(100% + 40px);margin:0 -20px;padding:6px 20px 10px;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
   .tab{flex:none;padding:8px 14px;font-size:14px}
-  .hero{padding-top:20px;gap:12px}
-  .hero-copy{padding-bottom:28px}
-  .art{flex:0 0 40%}
+  .hero{display:block;padding-top:20px}
+  .hero-copy{padding-bottom:62px}
+  .art{position:absolute;right:20px;bottom:0;display:block;margin:0}
+  .art svg{width:88px;height:66px;max-width:none;max-height:none;margin:0 0 20px auto}
+  #overview .art svg{width:132px;height:44px}
   .art figcaption{font-size:11px;bottom:4px}
   .wrap{padding-top:28px;padding-bottom:170px}
   .stop{grid-template-columns:16px minmax(0,1fr);grid-template-areas:"mark time" "mark body";column-gap:14px;padding:18px 0}
@@ -219,8 +221,10 @@ main:has(.pg:target) #overview:not(:target){display:none}
       <div class="days">
         <article class="day">
           <div class="day-hd" style="background:#6E5A4E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M8 22V10l4-4 4 4v12M4 22v-8l2-3 2 3M16 14l2-3 2 3v8M3 22h18"/></svg><div><h3>Day 1, Thursday</h3><p>19 November</p></div></div>
-          <ul><li><b>Evening</b><span>Arrival at Excelsior Hotel Gallia</span></li>
-           <li><b>20:00 – 22:30</b><span>Dinner at <i>Ristorante Conte Milano</i></span></li></ul>
+          <ul>
+            <li><b>Flexible</b><span>Individual arrival, <i>Excelsior Hotel Gallia</i></span></li>
+            <li><b>20:00 – 22:30</b><span>Dinner, <i>Ristorante Conte Milano</i></span></li>
+          </ul>
           <a class="btn" href="#thursday" style="--acc:#6E5A4E;--glow:rgba(176,138,46,.55)">See Thursday</a>
         </article>
         <article class="day">
@@ -260,6 +264,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
     <aside class="side">
       <h2>Key places</h2>
       <div class="place"><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg><div><div class="pday">Thursday</div><a class="pname" href="https://www.marriott.com/en-us/hotels/millc-excelsior-hotel-gallia-a-luxury-collection-hotel-milan/overview/" target="_blank" rel="noopener">Excelsior Hotel Gallia</a><div class="paddr">Piazza Duca d’Aosta 9, next to Milano Centrale station</div></div></div>
+      <div class="place"><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg><div><div class="pday">Thursday</div><a class="pname" href="https://maps.app.goo.gl/DbdD2XemVZQgkZwc7" target="_blank" rel="noopener">Ristorante Conte Milano</a><div class="paddr">Via Fabio Filzi 8</div></div></div>
       <div class="place"><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg><div><div class="pday">Friday</div><a class="pname" href="https://share.google/TjOciUjl5TrtEeFK3" target="_blank" rel="noopener">Capgemini Office</a><div class="paddr">Address to be confirmed</div></div></div>
       <div class="place"><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg><div><div class="pday">Friday</div><a class="pname" href="https://altrimentimixologyart.com/" target="_blank" rel="noopener">Altrimenti Mixology Art</a><div class="paddr">Via Castelfidardo 6, Brera</div></div></div>
       <div class="place"><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg><div><div class="pday">Friday</div><a class="pname" href="https://bobino.it/" target="_blank" rel="noopener">Bobino Milano</a><div class="paddr">Piazzale Stazione Genova 4, inside Porta Genova station</div></div></div>
@@ -270,11 +275,10 @@ main:has(.pg:target) #overview:not(:target){display:none}
   </div>
 
   <svg class="sil" viewBox="0 0 1200 160" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-    <defs><pattern id="mer-ov" width="16" height="10" patternUnits="userSpaceOnUse"><path d="M0 10V0l4 4 4-4v10z" fill="currentColor"/></pattern></defs>
-    <g fill="currentColor">
+        <g fill="currentColor">
       <rect x="0" y="140" width="1200" height="20"/>
       <path d="M80 160V100L230 60 380 100V160Z M100 104V70l5-18 5 18V104Z M160 88V50l5-18 5 18V88Z M224 72V20l6-20 6 20V72Z M290 88V50l5-18 5 18V88Z M350 104V70l5-18 5 18V104Z"/>
-      <rect x="440" y="110" width="200" height="50"/><rect x="440" y="100" width="200" height="10" fill="url(#mer-ov)"/>
+      <path d="M440 160V100L444 104L448 100V110H456V100L460 104L464 100V110H472V100L476 104L480 100V110H488V100L492 104L496 100V110H504V100L508 104L512 100V110H520V100L524 104L528 100V110H536V100L540 104L544 100V110H552V100L556 104L560 100V110H568V100L572 104L576 100V110H584V100L588 104L592 100V110H600V100L604 104L608 100V110H616V100L620 104L624 100V110H632V100L636 104L640 100V110V160Z"/>
       <rect x="510" y="50" width="60" height="110"/><path d="M520 50V34h40v16Z M526 34q14-22 28 0Z"/>
       <path d="M690 160V110h50v50Z M740 160V90l30-18 30 18v70Z M800 160V115h50v45Z M850 160V96h60v64Z"/>
       <path fill-rule="evenodd" d="M950 160V90h200v70Z M1020 160v-36a30 30 0 0 1 60 0v36Z"/><path d="M990 90q60-70 120 0Z"/>
@@ -323,25 +327,28 @@ main:has(.pg:target) #overview:not(:target){display:none}
   <div class="wrap">
     <div class="main-col">
       <div class="stop">
-        <div class="time">Afternoon</div>
+        <div class="time">Flexible</div>
         <svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 15V8l5-7 5 7v7z"/></svg>
         <div class="body">
-          <div class="what">Arrival </div>
-          <div class="where"><a href="https://maps.app.goo.gl/DbdD2XemVZQgkZwc7" target="_blank" rel="noopener">Ristorante Conte Milano</div>
-          <div class="how"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v2"/></svg>Individual arrival</div>
+          <div class="what">Arrival at the hotel</div>
+          <div class="where"><a href="https://www.marriott.com/en-us/hotels/millc-excelsior-hotel-gallia-a-luxury-collection-hotel-milan/overview/" target="_blank" rel="noopener">Excelsior Hotel Gallia</a></div>
+          <div class="how"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v2"/></svg>Individual arrival, no fixed time</div>
         </div>
+      </div>
+      <div class="stop">
+        <div class="time">20:00 – 22:30</div>
+        <svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 15V8l5-7 5 7v7z"/></svg>
         <div class="body">
           <div class="what">Dinner</div>
-          <div class="where"><a href="https://maps.app.goo.gl/DbdD2XemVZQgkZwc7" target="_blank" rel="noopener">Ristorante Conte Milano</div>
-          <div class="how"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v2"/></svg>Individual arrival</div>
+          <div class="where"><a href="https://maps.app.goo.gl/DbdD2XemVZQgkZwc7" target="_blank" rel="noopener">Ristorante Conte Milano</a></div>
         </div>
       </div>
       <div class="pager"><a class="btn ghost" href="#overview">Previous: Overview</a><a class="btn" href="#friday">Next: Friday</a></div>
     </div>
     <aside class="side">
-      <h2>Thursday’s location</h2>
+      <h2>Thursday’s locations</h2>
       <div class="place"><svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 15V8l5-7 5 7v7z"/></svg><div><a class="pname" href="https://www.marriott.com/en-us/hotels/millc-excelsior-hotel-gallia-a-luxury-collection-hotel-milan/overview/" target="_blank" rel="noopener">Excelsior Hotel Gallia</a><div class="paddr">Piazza Duca d’Aosta 9, next to Milano Centrale station</div></div></div>
-      <div class="place"><svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 15V8l5-7 5 7v7z"/></svg><div><a class="pname" href="https://maps.app.goo.gl/DbdD2XemVZQgkZwc7" target="_blank" rel="noopener">Ristorante Conte Milano</a><div class="paddr">Via Fabio Filzi, 8</div></div></div>  
+      <div class="place"><svg class="mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 15V8l5-7 5 7v7z"/></svg><div><a class="pname" href="https://maps.app.goo.gl/DbdD2XemVZQgkZwc7" target="_blank" rel="noopener">Ristorante Conte Milano</a><div class="paddr">Via Fabio Filzi 8</div></div></div>
     </aside>
   </div>
 
@@ -469,14 +476,7 @@ main:has(.pg:target) #overview:not(:target){display:none}
   </div>
 
   <svg class="sil" viewBox="0 0 1200 160" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-    <defs><pattern id="mer-fr2" width="20" height="14" patternUnits="userSpaceOnUse"><path d="M0 14V0l5 5 5-5v14z" fill="currentColor"/></pattern></defs>
-    <g fill="currentColor">
-      <rect x="0" y="86" width="1200" height="74"/>
-      <rect x="0" y="72" width="1200" height="14" fill="url(#mer-fr2)"/>
-      <rect x="70" y="40" width="90" height="120"/><rect x="66" y="26" width="98" height="14" fill="url(#mer-fr2)"/>
-      <rect x="1040" y="40" width="90" height="120"/><rect x="1036" y="26" width="98" height="14" fill="url(#mer-fr2)"/>
-      <rect x="560" y="20" width="80" height="140"/><path d="M574 20V6h52v14Z M584 6q16-14 32 0Z"/>
-    </g>
+    <path fill="currentColor" d="M0 160V72L5 77L10 72V86H20.17V72L25.17 77L30.17 72V86H40.34V72L45.34 77L50.34 72V86H60.51V72L65.51 77L70.51 72V86H80.68V72L85.68 77L90.68 72V86H100.85V72L105.85 77L110.85 72V86H121.02V72L126.02 77L131.02 72V86H141.19V72L146.19 77L151.19 72V86H161.36V72L166.36 77L171.36 72V86H181.53V72L186.53 77L191.53 72V86H201.69V72L206.69 77L211.69 72V86H221.86V72L226.86 77L231.86 72V86H242.03V72L247.03 77L252.03 72V86H262.2V72L267.2 77L272.2 72V86H282.37V72L287.37 77L292.37 72V86H302.54V72L307.54 77L312.54 72V86H322.71V72L327.71 77L332.71 72V86H342.88V72L347.88 77L352.88 72V86H363.05V72L368.05 77L373.05 72V86H383.22V72L388.22 77L393.22 72V86H403.39V72L408.39 77L413.39 72V86H423.56V72L428.56 77L433.56 72V86H443.73V72L448.73 77L453.73 72V86H463.9V72L468.9 77L473.9 72V86H484.07V72L489.07 77L494.07 72V86H504.24V72L509.24 77L514.24 72V86H524.41V72L529.41 77L534.41 72V86H544.58V72L549.58 77L554.58 72V86H564.75V72L569.75 77L574.75 72V86H584.92V72L589.92 77L594.92 72V86H605.08V72L610.08 77L615.08 72V86H625.25V72L630.25 77L635.25 72V86H645.42V72L650.42 77L655.42 72V86H665.59V72L670.59 77L675.59 72V86H685.76V72L690.76 77L695.76 72V86H705.93V72L710.93 77L715.93 72V86H726.1V72L731.1 77L736.1 72V86H746.27V72L751.27 77L756.27 72V86H766.44V72L771.44 77L776.44 72V86H786.61V72L791.61 77L796.61 72V86H806.78V72L811.78 77L816.78 72V86H826.95V72L831.95 77L836.95 72V86H847.12V72L852.12 77L857.12 72V86H867.29V72L872.29 77L877.29 72V86H887.46V72L892.46 77L897.46 72V86H907.63V72L912.63 77L917.63 72V86H927.8V72L932.8 77L937.8 72V86H947.97V72L952.97 77L957.97 72V86H968.14V72L973.14 77L978.14 72V86H988.31V72L993.31 77L998.31 72V86H1008.47V72L1013.47 77L1018.47 72V86H1028.64V72L1033.64 77L1038.64 72V86H1048.81V72L1053.81 77L1058.81 72V86H1068.98V72L1073.98 77L1078.98 72V86H1089.15V72L1094.15 77L1099.15 72V86H1109.32V72L1114.32 77L1119.32 72V86H1129.49V72L1134.49 77L1139.49 72V86H1149.66V72L1154.66 77L1159.66 72V86H1169.83V72L1174.83 77L1179.83 72V86H1190V72L1195 77L1200 72V86V160Z M70 160V26L75 31L80 26V40H90V26L95 31L100 26V40H110V26L115 31L120 26V40H130V26L135 31L140 26V40H150V26L155 31L160 26V40V160Z M1040 160V26L1045 31L1050 26V40H1060V26L1065 31L1070 26V40H1080V26L1085 31L1090 26V40H1100V26L1105 31L1110 26V40H1120V26L1125 31L1130 26V40V160Z M560 160V20h80v140Z M574 20V6h52v14Z M584 6q16-14 32 0Z"/>
   </svg>
 </section>
 
